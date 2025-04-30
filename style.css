@@ -1,0 +1,182 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: radial-gradient(circle at center, #8b8b8b 0%, #111 100%);
+    font-family: Arial, sans-serif;
+    color: #dcdcdc;
+    height: 100vh;
+  
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .sitewrapper {
+    width: 100%;
+  }
+  
+  .siteheader {
+    background-color: rgb(255, 255, 255);
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center; /* center the inner wrapper */
+  }
+  
+  .siteheader_inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+  }  
+  
+  .siteheader_inner img {
+    height: 60px;
+  }
+  
+  .siteheader_nav {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .header_button {
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+    color: #000000;
+    font-size: 16px;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: background-color 0.7s ease;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+  }
+  
+  .header_button:hover {
+    background-color: rgba(148, 148, 148, 0.384);
+  }
+  
+  /* Fix clock alignment */
+  #clock {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 48px;
+    font-weight: bold;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+  }
+
+/* Intro Section */
+.intro {
+    background-color: #181818;
+    color: white;
+    padding: 60px 20px;
+  }
+  
+  .intro_inner {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .intro_text {
+    flex: 1 1 500px;
+    max-width: 600px;
+  }
+  
+  .intro_text h2 {
+    font-size: 36px;
+    margin-bottom: 16px;
+  }
+  
+  .intro_text p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 24px;
+  }
+  
+  .intro_buttons .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-right: 12px;
+  }
+  
+  .btn.primary {
+    background-color: #fbff00;
+    color: #181818;
+  }
+
+  .btn.primary:hover {
+    background-color: #ffffff;
+    color: #181818;
+  }
+  
+  .btn.outline {
+    border: 2px solid white;
+    color: white;
+    background-color: transparent;
+  }
+
+  .btn.outline:hover {
+    color: #181818;
+    background-color: white;
+  }
+  
+  /* Intro Image */
+  .intro_image img {
+    max-width: 400px;
+    width: 100%;
+    border-radius: 8px;
+  }
+  
+  /* Mini Bio Section */
+  .mini_bio {
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .mini_bio h2 {
+    color: white;
+    font-size: 38px;
+    margin-bottom: 32px;
+    text-align: center;
+  }
+  
+  .bio_grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    justify-content: center;
+  }
+  
+  .bio_card {
+    background-color: #f1f3f5;
+    padding: 20px;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  }
+  
+  .bio_card h3 {
+    color: #181818;
+    margin-bottom: 12px;
+    font-size: 20px;
+  }
+  
+  .bio_card p {
+    font-size: 16px;
+    color: #555;
+  }
+  
