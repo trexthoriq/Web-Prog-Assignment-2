@@ -17,9 +17,11 @@ body {
   .siteheader {
     background-color: rgb(255, 255, 255);
     padding: 10px 20px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
     display: flex;
     justify-content: center; /* center the inner wrapper */
+    position: relative;
+    z-index: 10;
   }
   
   .siteheader_inner {
@@ -57,23 +59,12 @@ body {
   .header_button:hover {
     background-color: rgba(148, 148, 148, 0.384);
   }
-  
-  /* Fix clock alignment */
-  #clock {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 48px;
-    font-weight: bold;
-    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
-  }
 
 /* Intro Section */
 .intro {
     background-color: #181818;
     color: white;
-    padding: 60px 20px;
+    padding: 0px 20px;
   }
   
   .intro_inner {
@@ -141,7 +132,7 @@ body {
   
   /* Mini Bio Section */
   .mini_bio {
-    padding: 60px 20px;
+    padding: 40px 20px;
     max-width: 1200px;
     margin: 0 auto;
   }
@@ -149,7 +140,7 @@ body {
   .mini_bio h2 {
     color: white;
     font-size: 38px;
-    margin-bottom: 32px;
+    margin: 15px;
     text-align: center;
   }
   
@@ -168,6 +159,15 @@ body {
     max-width: 400px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.05);
   }
+
+  .bio_card:hover {
+    background-color: #fbff00;
+    padding: 20px;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.815);
+  }
   
   .bio_card h3 {
     color: #181818;
@@ -179,4 +179,93 @@ body {
     font-size: 16px;
     color: #555;
   }
-  
+
+  /* About Section */
+.about_section {
+  background-color: #fbff00;
+  padding: 60px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+
+.about_card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #181818;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  width: 100%;
+  max-width: 1000px;
+  font-family: Arial, sans-serif;
+}
+
+.about_text {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.about_text h3 {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #ffffff;
+}
+
+.about_text p {
+  font-size: 16px;
+  font-weight: normal;
+  color: #ffffff;
+}
+
+.about_card img {
+  width: 120px;
+  height: 120px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+/* JS Projects Section */
+.js_projects {
+  max-width: 1000px;
+  margin: 60px auto;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  font-family: Arial, sans-serif;
+}
+
+.js_card {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  max-width: 1000px;
+  height: 600px;
+  box-sizing: border-box;
+}
+
+/* Clock Card Specific Styling */
+.clock_card {
+  background-color: #181818;
+  color: #fbff00;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.clock_card h3 {
+  margin-bottom: 20px;
+}
+
+#clock {
+  font-size: 64px;
+  font-weight: bold;
+  color: #fbff00;
+}
