@@ -222,10 +222,63 @@ body {
 }
 
 .about_card img {
-  width: 120px;
-  height: 120px;
+  width: 220px;
+  height: 220px;
   border-radius: 8px;
   object-fit: cover;
+}
+
+.contact-section {
+  padding: 40px;
+  text-align: center;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.contact-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #f5f5f5;
+  color: #181818;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.card-info {
+  text-align: left;
+  flex: 1;
+}
+
+.card-image img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-left: 20px;
+}
+
+.linkedin-button {
+  display: inline-block;
+  background-color: #0077B5;
+  color: white;
+  text-decoration: none;
+  padding: 8px 16px;
+  margin-top: 10px;
+  border-radius: 4px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.linkedin-button:hover {
+  background-color: #005983;
 }
 
 /* JS Projects Section */
@@ -258,14 +311,36 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin: 20px;
 }
 
-.clock_card h3 {
-  margin-bottom: 20px;
+.clock_card h3,
+.clock_card p,
+#clock {
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.664);
 }
 
 #clock {
   font-size: 64px;
   font-weight: bold;
   color: #fbff00;
+}
+
+.color-btn {
+  background-color: #fbff00;
+  color: #181818;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.color-btn:hover {
+  background-color: #dede00;
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
