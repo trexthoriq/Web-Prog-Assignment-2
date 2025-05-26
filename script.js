@@ -19,3 +19,21 @@ function changeColor() {
   const card = document.getElementById('colorCard');
   card.style.backgroundColor = randomColor;
 }
+
+// Fetch and display comments
+function loadComments() {
+  fetch('get_comments.php')
+    .then(response => response.json())
+    .then(data => {
+      const commentsList = document.getElementById('commentsList');
+      commentsList.innerHTML = '';
+      data.forEach(comment => {
+        const div = document.createElement('div');
+        div.classList.add('comment');
+        div.innerHTML = `<strong>${comment.name}</strong><p>${comment.comment}</p><small>${comment.created_at}</small>`;
+        commentsList.appendChild(div);
+      });
+    });
+}
+
+document.addEventListener('DOMContentLoaded', loadComments);
