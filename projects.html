@@ -40,5 +40,20 @@
     </div>
   </section>
 
+  <!-- By: Raghid -->
+<section class="comment-section">
+  <h2>Leave a Comment</h2>
+  <form id="commentForm" action="submit_comment.php" method="POST">
+    <input type="text" name="name" placeholder="Your name" required>
+    <textarea name="comment" placeholder="Write your comment..." required></textarea>
+    <button type="submit">Submit</button>
+  </form>
+
+  <div id="commentsContainer">
+    <h3>All Comments</h3>
+    <div id="commentsList"></div>
+  </div>
+</section>
+
 </body>
 </html>
