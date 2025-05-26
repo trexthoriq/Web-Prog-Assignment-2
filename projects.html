@@ -1,59 +1,432 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Group Portfolio Website</title>
-  <link rel="stylesheet" href="style.css" />
-  <script src="script.js" defer></script>
-</head>
-<body>
-  <div class="sitewrapper">
-    <header class="siteheader">
-      <div class="siteheader_inner">
-        <a href="index.html" class="logo" aria-label="Homepage">
-          <img src="Logo.png" alt="Site Logo">
-        </a>
-        <nav class="siteheader_nav" aria-label="Main Navigation">
-          <a href="index.html" class="header_button">Home</a>
-          <a href="about.html" class="header_button">About Us</a>
-          <a href="projects.html" class="header_button">Projects</a>
-          <a href="contact.html" class="header_button">Contact</a>
-        </nav>
-      </div>
-    </header>
-  </div>
+body {
+    margin: 0;
+    padding: 0;
+    background: radial-gradient(circle at center, #8b8b8b 0%, #111 100%);
+    font-family: Arial, sans-serif;
+    color: #dcdcdc;
+    height: 100vh;
+  
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .sitewrapper {
+    width: 100%;
+  }
+  
+  .siteheader {
+    background-color: rgb(255, 255, 255);
+    padding: 10px 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center; /* center the inner wrapper */
+    position: relative;
+    z-index: 10;
+  }
+  
+  .siteheader_inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+  }  
+  
+  .siteheader_inner img {
+    height: 60px;
+  }
+  
+  .siteheader_nav {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .header_button {
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+    color: #000000;
+    font-size: 16px;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: background-color 0.7s ease;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+  }
+  
+  .header_button:hover {
+    background-color: rgba(148, 148, 148, 0.384);
+  }
 
-  <!-- JS Project Cards -->
-   <!-- By: Raghid -->
-  <section class="js_projects">
-    <div class="js_card clock_card">
-      <h3>Digital Clock</h3>
-      <div id="clock">--:--:--</div>
-    </div>
+/* Intro Section */
+.intro {
+    background-color: #181818;
+    color: white;
+    padding: 0px 20px;
+  }
+  
+  .intro_inner {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .intro_text {
+    flex: 1 1 500px;
+    max-width: 600px;
+  }
+  
+  .intro_text h2 {
+    font-size: 36px;
+    margin-bottom: 16px;
+  }
+  
+  .intro_text p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 24px;
+  }
+  
+  .intro_buttons .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-right: 12px;
+  }
+  
+  .btn.primary {
+    background-color: #fbff00;
+    color: #181818;
+  }
 
-    <!-- By: Ryan -->
-    <div class="js_card clock_card" id="colorCard">
-      <h3>Background Color Changer</h3>
-      <p>Click the button below to change the background color of this card.</p>
-      <button class="color-btn" onclick="changeColor()">Change Color</button>
-    </div>
-  </section>
+  .btn.primary:hover {
+    background-color: #ffffff;
+    color: #181818;
+  }
+  
+  .btn.outline {
+    border: 2px solid white;
+    color: white;
+    background-color: transparent;
+  }
 
-  <!-- By: Raghid -->
-<section class="comment-section">
-  <h2>Leave a Comment</h2>
-  <form id="commentForm" action="submit_comment.php" method="POST">
-    <input type="text" name="name" placeholder="Your name" required>
-    <textarea name="comment" placeholder="Write your comment..." required></textarea>
-    <button type="submit">Submit</button>
-  </form>
+  .btn.outline:hover {
+    color: #181818;
+    background-color: white;
+  }
+  
+  /* Intro Image */
+  .intro_image img {
+    max-width: 400px;
+    width: 100%;
+    border-radius: 8px;
+  }
+  
+  /* Mini Bio Section */
+  .mini_bio {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .mini_bio h2 {
+    color: white;
+    font-size: 38px;
+    margin: 15px;
+    text-align: center;
+  }
+  
+  .bio_grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    justify-content: center;
+  }
+  
+  .bio_card {
+    background-color: #f1f3f5;
+    padding: 20px;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  }
 
-  <div id="commentsContainer">
-    <h3>All Comments</h3>
-    <div id="commentsList"></div>
-  </div>
-</section>
+  .bio_card:hover {
+    background-color: #fbff00;
+    padding: 20px;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.815);
+  }
+  
+  .bio_card h3 {
+    color: #181818;
+    margin-bottom: 12px;
+    font-size: 20px;
+  }
+  
+  .bio_card p {
+    font-size: 16px;
+    color: #555;
+  }
 
-</body>
-</html>
+  /* About Section */
+.about_section {
+  background-color: #fbff00;
+  padding: 60px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+
+.about_card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #181818;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  width: 100%;
+  max-width: 1000px;
+  font-family: Arial, sans-serif;
+}
+
+.about_text {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.about_text h3 {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #ffffff;
+}
+
+.about_text p {
+  font-size: 16px;
+  font-weight: normal;
+  color: #ffffff;
+}
+
+.about_card img {
+  width: 220px;
+  height: 220px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.contact-section {
+  padding: 40px;
+  text-align: center;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.contact-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #f5f5f5;
+  color: #181818;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.card-info {
+  text-align: left;
+  flex: 1;
+}
+
+.card-image img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-left: 20px;
+}
+
+.linkedin-button {
+  display: inline-block;
+  background-color: #0077B5;
+  color: white;
+  text-decoration: none;
+  padding: 8px 16px;
+  margin-top: 10px;
+  border-radius: 4px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.linkedin-button:hover {
+  background-color: #005983;
+}
+
+/* JS Projects Section */
+.js_projects {
+  max-width: 1000px;
+  margin: 60px auto;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  font-family: Arial, sans-serif;
+}
+
+.js_card {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  max-width: 1000px;
+  height: 600px;
+  box-sizing: border-box;
+}
+
+/* Clock Card Specific Styling */
+.clock_card {
+  background-color: #181818;
+  color: #fbff00;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+}
+
+.clock_card h3,
+.clock_card p,
+#clock {
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.664);
+}
+
+#clock {
+  font-size: 64px;
+  font-weight: bold;
+  color: #fbff00;
+}
+
+.color-btn {
+  background-color: #fbff00;
+  color: #181818;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.color-btn:hover {
+  background-color: #dede00;
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.comment-section {
+  background-color: #f1f1f1;
+  padding: 40px 30px;
+  margin-top: 60px;
+  border-radius: 12px;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  color: #181818;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+}
+
+.comment-section h2,
+.comment-section h3 {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+#commentForm {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+}
+
+#commentForm input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+}
+#commentForm textarea {
+  width: 100%;
+  padding: 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+}
+
+#commentForm button {
+  background-color: #fbff00;
+  color: #181818;
+  font-weight: bold;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  align-self: flex-start;
+  transition: background-color 0.3s ease;
+}
+
+#commentForm button:hover {
+  background-color: #fff700;
+}
+
+#commentsList {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+#commentsList .comment {
+  background-color: white;
+  padding: 16px;
+  border-left: 5px solid #fbff00;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+#commentsList .comment strong {
+  display: block;
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+#commentsList .comment small {
+  display: block;
+  margin-top: 10px;
+  color: #666;
+  font-size: 13px;
+}
